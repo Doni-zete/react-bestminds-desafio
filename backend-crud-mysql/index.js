@@ -1,8 +1,9 @@
-const express = require('express')
+import express from 'express'
 const app = express()
-const connectToDatabase = require('./src/databases/database')
+import { connectToDatabase } from './src/databases/database.js';
 
-port = 5000
+
+const port = 5000
 
 connectToDatabase()
     .then((connection) => {
