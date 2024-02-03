@@ -1,6 +1,5 @@
 import { connectToDatabase } from '../databases/database.js'
 
-
 const selectProdutoController = async (req, res) => {
  try {
   const connection = await connectToDatabase()
@@ -83,10 +82,50 @@ const updateProdutoController = async (req, res) => {
  }
 }
 
+const createProdutoController = async (req, res) => {
+ try {
+  const { nome, codigo, descricao, preco, imagem } = req.body
+
+  if (!nome || !codigo || !descricao || !preco || !imagem) {
+   return res
+    .status(400)
+    .json({ error: 'Nome, código, descrição, preco e imagem são obrigatórios' })
+  }
+
+  const connection = await connectToDatabase()
+  const values = [nome, codigo, descricao, preco, imagem]
+
+  const [selecionaProdutos] = await connection.query(
+   'INSERT INTO produtos(nome, codigo, descricao, preco, imagem) VALUES(?,?,?,?,?)',
+   values
+  )
+
+
+  res
+   .status(201)
+   .json({
+    mensagem: 'Produto criado com sucesso',
+    novoProduto: {
+     id: selecionaProdutos.insertId,
+     nome,
+     codigo,
+     descricao,
+     preco,
+     imagem,
+    },
+   })
+  console.log(`novoProduto: ${values}`)
+ } catch (error) {
+  console.error('Erro na consulta ao banco de dados:', error.message)
+  res.status(500).json({ error: `Erro interno do servidor ${error}` })
+ }
+}
+
 const produtoController = {
  selectProdutoController,
  deleteProdutoController,
  updateProdutoController,
+ createProdutoController,
 }
 
 export default produtoController
