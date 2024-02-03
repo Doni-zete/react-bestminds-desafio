@@ -1,9 +1,11 @@
 import express from 'express'
 const app = express()
 import { connectToDatabase } from './src/databases/database.js';
-
+import produtoRoute from './src/routes/produtosRoutes.js'
 
 const port = 5000
+
+app.use('/api', produtoRoute)
 
 connectToDatabase()
     .then((connection) => {
