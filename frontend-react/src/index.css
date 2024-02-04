@@ -19,15 +19,16 @@ body {
 }
 
 .bg-primary {
- background: #a62121;
+        background: #131921;
+
 }
 
 .bg-secundary {
- background: white;
+    background: white;
 }
 
 .bg-nav {
- background: #a62121;
+    background: #131921;
 }
 
 .header-banner {
