@@ -3,10 +3,22 @@ const app = express()
 import { connectToDatabase } from './src/databases/database.js';
 import produtoRoute from './src/routes/produtosRoutes.js'
 
-app.use(express.json());
-const port = 5000
 
-app.use('/api', produtoRoute)
+import cors from 'cors'
+    
+app.use(express.json());
+const port = 3000
+
+
+app.use(
+    cors({
+        origin: ['*'],
+        origin: ['http://localhost:3001', 'http://localhost:3002'],
+        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    })
+)
+
+app.use('/produto', produtoRoute)
 
 connectToDatabase()
     .then((connection) => {
