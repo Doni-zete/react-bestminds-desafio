@@ -3,9 +3,9 @@ import produtoController from '../controllers/produtoController.js'
 
 const router = express.Router()
 
-router.delete('/produtos/:id', produtoController.deleteProdutoController)
-router.get('/produtos', produtoController.selectProdutoController)
-router.put('/produtos/:id', produtoController.updateProdutoController)
-router.post('/produtos/', produtoController.createProdutoController)
+router.delete('/delete/:id', produtoController.deleteProdutoController)
+router.get('/findAll', produtoController.selectProdutoController)
+router.put('/update/:id', produtoController.updateProdutoController)
+router.post('/create', produtoController.createProdutoController)
 
 export default router
