@@ -1,11 +1,24 @@
 
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Home from './pages/Home';
+import NavMenu from './componets/NavMenu';
+import Admin from './pages/Admin';
+import Sobre from './pages/Sobre';
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+    <>
+      <BrowserRouter>
+        <NavMenu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/sobre" element={<Sobre />} />
+        </Routes>
+      </BrowserRouter >
+
+    </>
   );
 }
 
