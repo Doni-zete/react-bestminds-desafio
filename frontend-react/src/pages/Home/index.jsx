@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import ProdutoCamisaGola from '../../componets/ProdutoCamisaGola'
-import ProdutoBermuda from '../../componets/ProdutoBermuda'
-import Footer from './../../componets/Footer'
 
+import ProdutoBermuda from '../../components/ProdutoBermuda'
+import ProdutoListaEsportivo from '../../components/ProdutoListaEsportivo'
+import Footer from './../../components/Footer'
+import ProdutoListaCamisa from '../../components/ProdutoListaCamisa'
 
 const Home = () => {
  const [categoriaTab, setCategoriaTab] = useState('Camisa')
@@ -12,7 +13,7 @@ const Home = () => {
  }
 
  const handleTabClick = (categoria, event) => {
-  event.preventDefault() 
+  event.preventDefault()
   handleCategoriaChange(categoria)
  }
 
@@ -27,9 +28,7 @@ const Home = () => {
    <div className="flex items-center justify-center space-x-6 py-12">
     <p
      className={
-      categoriaTab === 'Camisa'
-       ? 'active-menu-tab bg-primary'
-       : 'menu-tab'
+      categoriaTab === 'Camisa' ? 'active-menu-tab bg-primary' : 'menu-tab'
      }
      onClick={(e) => handleTabClick('Camisa', e)}
     >
@@ -43,9 +42,20 @@ const Home = () => {
     >
      Bermuda
     </p>
+    <p
+     className={
+      categoriaTab === 'Produtos Esportivos'
+       ? 'active-menu-tab bg-primary'
+       : 'menu-tab'
+     }
+     onClick={(e) => handleTabClick('Produtos Esportivos', e)}
+    >
+     Produtos Esportivos
+    </p>
    </div>
-   {categoriaTab === 'Camisa' && <ProdutoCamisaGola />}
+   {categoriaTab === 'Camisa' && <ProdutoListaCamisa />}
    {categoriaTab === 'Bermuda' && <ProdutoBermuda />}
+   {categoriaTab === 'Produtos Esportivos' && <ProdutoListaEsportivo />}
 
    <Footer />
   </>
