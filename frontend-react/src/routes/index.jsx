@@ -6,6 +6,7 @@ import NavMenu from '../components/NavMenu'
 import Admin from '../pages/Admin'
 import Sobre from '../pages/Sobre'
 import AddProduto from '../pages/AddProduto'
+import EditeProduto from '../pages/EditeProduto'
 import ProdutoListaEsportivo from '../components/ProdutoListaEsportivo'
 
 export default function Rotas() {
@@ -16,8 +17,12 @@ export default function Rotas() {
     <Route path="/" element={<Home />} />
     <Route path="/admin" element={<Admin />} />
     <Route path="/sobre" element={<Sobre />} />
-    <Route path="/produto-lista-esportivo" element={<ProdutoListaEsportivo />} />
+    <Route
+     path="/produto-lista-esportivo"
+     element={<ProdutoListaEsportivo />}
+    />
     <Route path="/admin/add-product" element={<AddProduto />} />
+    <Route path="/admin/edit-product/:id" element={<EditeProduto />} />
    </Routes>
   </BrowserRouter>
  )
