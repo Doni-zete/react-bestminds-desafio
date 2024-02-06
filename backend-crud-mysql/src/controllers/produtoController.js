@@ -44,10 +44,10 @@ const deleteProdutoController = async (req, res) => {
 
 const updateProdutoController = async (req, res) => {
  try {
-  const { nome, codigo, descricao } = req.body
+  const { nome, codigo, descricao, preco, imagem } = req.body
   const produtoId = req.params.id
 
-  if (!nome || !codigo || !descricao || !produtoId) {
+   if (!nome || !codigo || !descricao || !preco || !imagem || !produtoId) {
    return res
     .status(400)
     .json({ error: 'ID, nome, codigo e descricao são obrigatórios' })
@@ -65,10 +65,10 @@ const updateProdutoController = async (req, res) => {
     .status(404)
     .json({ message: `Produto com ID ${produtoId} não encontrado` })
   }
-
+   
   const updateQuery =
-   'UPDATE produtos SET nome = ?, codigo = ?, descricao = ? WHERE id = ?'
-  const values = [nome, codigo, descricao, produtoId]
+   'UPDATE produtos SET nome = ?, codigo = ?,  descricao = ?, preco = ?, imagem = ?WHERE id = ?'
+   const values = [nome, codigo, descricao, preco, imagem, produtoId]
 
   await connection.query(updateQuery, values)
   connection.release()
@@ -86,14 +86,14 @@ const createProdutoController = async (req, res) => {
  try {
   const { nome, codigo, descricao, preco, imagem } = req.body
 
-  if (!nome || !codigo || !descricao || !preco || !imagem) {
+   if (!nome || !codigo || !descricao || !preco || !imagem ) {
    return res
     .status(400)
     .json({ error: 'Nome, código, descrição, preco e imagem são obrigatórios' })
   }
 
   const connection = await connectToDatabase()
-  const values = [nome, codigo, descricao, preco, imagem]
+   const values = [nome, codigo, descricao, preco, imagem]
 
   const [selecionaProdutos] = await connection.query(
    'INSERT INTO produtos(nome, codigo, descricao, preco, imagem) VALUES(?,?,?,?,?)',
