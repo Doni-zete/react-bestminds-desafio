@@ -7,9 +7,12 @@ import {
  deleteProduct,
 } from '../../services/produtoEsportivoService'
 import Footer from '../../components/Footer'
+import ModalConfirmarDelete from '../../components/ModalConfirmarDelete'
 
 const Admin = () => {
  const [products, setProducts] = useState([])
+ const [showModal, setShowModal] = useState(false)
+ const [productIdToDelete, setProductIdToDelete] = useState(null)
  const navigate = useNavigate()
 
  useEffect(() => {
@@ -41,16 +44,24 @@ const Admin = () => {
 
  const removeProduct = async (id) => {
   console.log('ID:', id)
+  setProductIdToDelete(id)
+  setShowModal(true)
+ }
 
-  const answer = window.confirm('Deseja excluir o produto ?')
-  if (answer) {
-   try {
-    await deleteProduct(id)
-    getAllProducts()
-   } catch (error) {
-    console.error('Erro ao excluir produto:', error)
-   }
+ const handleDelete = async () => {
+  try {
+   await deleteProduct(productIdToDelete)
+   setShowModal(false)
+   setProductIdToDelete(null)
+   getAllProducts()
+  } catch (error) {
+   console.error('Erro ao excluir produto:', error)
   }
+ }
+
+ const handleCancel = () => {
+  setShowModal(false)
+  setProductIdToDelete(null)
  }
 
  return (
@@ -149,6 +160,13 @@ const Admin = () => {
    </section>
 
    <Footer />
+   <ModalConfirmarDelete
+    isOpen={showModal}
+    title="Confirmação"
+    message="Deseja excluir o produto?"
+    onOk={handleDelete}
+    onCancel={handleCancel}
+   />
   </>
  )
 }
