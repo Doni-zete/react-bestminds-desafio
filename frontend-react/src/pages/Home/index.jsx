@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-
-import ProdutoBermuda from '../../components/ProdutoBermuda'
 import ProdutoListaEsportivo from '../../components/ProdutoListaEsportivo'
 import Footer from './../../components/Footer'
-import ProdutoListaCamisa from '../../components/ProdutoListaCamisa'
 
 const Home = () => {
- const [categoriaTab, setCategoriaTab] = useState('Camisa')
+ const [categoriaTab, setCategoriaTab] = useState('Produtos Esportivos')
 
  const handleCategoriaChange = (categoria) => {
   setCategoriaTab(categoria)
@@ -28,22 +25,6 @@ const Home = () => {
    <div className="flex items-center justify-center space-x-6 py-12">
     <p
      className={
-      categoriaTab === 'Camisa' ? 'active-menu-tab bg-primary' : 'menu-tab'
-     }
-     onClick={(e) => handleTabClick('Camisa', e)}
-    >
-     Camisa
-    </p>
-    <p
-     className={
-      categoriaTab === 'Bermuda' ? 'active-menu-tab bg-primary' : 'menu-tab'
-     }
-     onClick={(e) => handleTabClick('Bermuda', e)}
-    >
-     Bermuda
-    </p>
-    <p
-     className={
       categoriaTab === 'Produtos Esportivos'
        ? 'active-menu-tab bg-primary'
        : 'menu-tab'
@@ -53,8 +34,6 @@ const Home = () => {
      Produtos Esportivos
     </p>
    </div>
-   {categoriaTab === 'Camisa' && <ProdutoListaCamisa />}
-   {categoriaTab === 'Bermuda' && <ProdutoBermuda />}
    {categoriaTab === 'Produtos Esportivos' && <ProdutoListaEsportivo />}
 
    <Footer />
