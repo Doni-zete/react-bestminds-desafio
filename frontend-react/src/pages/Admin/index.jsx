@@ -109,7 +109,7 @@ const Admin = () => {
          </thead>
          <tbody>
           {products.map((product) => (
-           <tr key={product._id} className="bg-white border-b">
+           <tr key={product.id} className="bg-white border-b">
             <td className=" px-6 py-4 whitespace-nowrap text-sm font-medium ">
              <img
               className="w-1/2 transition duration-700 hover:scale-105"
@@ -128,9 +128,10 @@ const Admin = () => {
             </td>
             <td className="px-6 py-4 whitespace-nowrap flex flex-col h-24 items-center justify-center">
              <div className="flex items-center justify-center space-x-3">
-              <Link to={`/admin/edit-product/${product._id}`}>
+              <Link to={`/admin/edit-product/${product.id}`}>
                <FaEdit className="cursor-pointer text-2xl text-blue-400" />
               </Link>
+
               <MdDelete
                onClick={() => removeProduct(product.id)}
                className="cursor-pointer w-20 text-2xl text-red-600"
