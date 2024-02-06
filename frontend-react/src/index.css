@@ -38,3 +38,16 @@ body {
  background-position: top;
  background-size: cover;
 }
+
+
+
+.shared-style p{
+  
+  @apply text-center text-lg rounded-xl bg-red-200 font-bold p-6;
+  margin: 1rem;
+}
+
+.shared-style ul {
+  @apply list-disc text-lg rounded-xl bg-red-200 font-bold p-6;
+  margin: 1rem;
+}

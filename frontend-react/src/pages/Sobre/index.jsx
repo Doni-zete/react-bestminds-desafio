@@ -1,31 +1,66 @@
 import React from 'react'
 import Footer from '../../components/Footer'
+
 const Sobre = () => {
  return (
   <>
    <section className="min-h-screen w-full banner bg-gray-100 flex justify-center items-center">
-    <div className="w-full max-w-5xl">
-     <h2 className="text-center text-2xl rounded-xl bg-red-200 font-bold p-6">
-      Fuscão Vermelho: Junte-se à comunidade de compradores inteligentes que
-      escolhem o Fuscão Vermelho para todas as suas necessidades de compras
-      online.
-     </h2>
-     <p className="text-center text-xl rounded-xl bg-red-200 font-bold p-6">
-      Mussum Ipsum, cacilds vidis litro abertis. Si num tem leite então bota uma
-      pinga aí cumpadi! Em pé sem cair, deitado sem dormir, sentado sem cochilar
-      e fazendo pose. Delegadis gente finis, bibendum egestas augue arcu ut est.
-      Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit
-      amet nisi. Cevadis im ampola pa arma uma pindureta. Quem manda na minha
-      terra sou euzis! Copo furadis é disculpa de bebadis, arcu quam euismod
-      magna. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Paisis,
-      filhis, espiritis santis. Em pé sem cair, deitado sem dormir, sentado sem
-      cochilar e fazendo pose. Aenean aliquam molestie leo, vitae iaculis nisl.
-      Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo,
-      vitae iaculis nisl. Quem num gosta di mé, boa gentis num é. Praesent
-      malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate
-      dapibus. Aenean aliquam molestie leo, vitae iaculis nisl. Si u mundo tá
-      muito paradis? Toma um mé que o mundo vai girarzis!
-     </p>
+    <div className="w-full max-w-3xl">
+     <div className="shared-style">
+      <p>
+       Neste desafio a pessoa candidata terá total liberdade de usar as
+       ferramentas e linguagens que está mais familiarizado.
+      </p>
+      <p>
+       O objetivo principal será identificar sua criatividade e a capacidade de
+       resolver um problema, principalmente o potencial de implementação,
+       qualidade de código, organização, boas práticas, conceitos de Clean Code
+       SOLID e preocupação com desenvolvimento para grandes volumes
+       transacionais.
+      </p>
+      <div>
+      
+       <p>
+        Você é responsável por desenvolver a solução, definir o modelo de
+        entrega, utilizando-se das ferramentas de mercado atuais, bem como por
+        pensar em compartilhamento de código, versão de fontes etc. O desafio
+        consiste em criar uma solução para atender um requisito de um projeto:
+       </p>
+      </div>
+      <p>
+       Nosso cliente fictício será a empresa Nunes Sports e foi solicitado pelo
+       board da empresa que seja desenvolvido um sistema para exibição, criação,
+       edição e deleção dos produtos vendidos pela companhia.
+      </p>
+      <p>Os requisitos necessários para a entrega são:</p>
+
+      <div>
+       <ul className="list-disc">
+        
+        <li>Ter uma base de dados com uma tabela produtos com os campos:</li>
+        <li>Nome do produto</li>
+        <li>Código de produto</li>
+        <li>Descrição do produto</li>
+        <li>Preço do produto.</li>
+        <li>
+         Criar uma página web na tecnologia de sua preferência para o CRUD de
+         produtos.
+        </li>
+        <li>
+         Nessa página o usuário deverá ter a habilidade de exibir, deletar,
+         criar, e editar produtos que estão salvos na base.
+        </li>
+        <li>Todas as ações na página deverão refletir no banco de dados</li>
+       </ul>
+      </div>
+      <p>
+       IMPORTANTE: O projeto deverá estar em um repositório do git para
+       conferência. Compartilhe no link disponível na página da WallJobs, o seu
+       github, com as informações para acesso. CONSIDERAÇÕES FINAIS: Esperamos
+       que consiga executar até o final, entretanto, mesmo que não consiga
+       concluir totalmente, pedimos que entregue o que conseguir.
+      </p>
+     </div>
     </div>
    </section>
    <Footer />
