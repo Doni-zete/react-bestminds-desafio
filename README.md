@@ -19,7 +19,7 @@ Ter uma base de dados com uma tabela produtos com os campos:
 
 
 ## Video de apresentação do projeto em execução
-![Projeto finalizado]([https://github.com/Doni-zete/react-bestminds-desafio/blob/main/img/baixado.png](https://github.com/Doni-zete/react-bestminds-desafio/blob/main/img/projeto%20finalizado.mp4)
+![Projeto finalizado](https://youtu.be/1duhHda-bdI)
 
 ## Stack utilizada
 
