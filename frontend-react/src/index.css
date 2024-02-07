@@ -40,6 +40,14 @@ body {
 }
 
 
+.banner-not-found {
+  background-image: url("../src/assets/error-404-not-found.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 100%;
+
+}
+
 
 .shared-style p{
   
@@ -51,3 +59,5 @@ body {
   @apply list-disc text-lg rounded-xl bg-red-200 font-bold p-6;
   margin: 1rem;
 }
+
+
