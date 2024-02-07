@@ -148,5 +148,4 @@ O frontend-react esta rodando na porta:
 
 ## Feedback
 
-Se você tiver algum feedback, por favor nos deixe saber por meio de fake@fake.com
-
+Se você tiver algum feedback, por favor me deixe saber por meio de donizetecrisostomo.b@gmail.com
