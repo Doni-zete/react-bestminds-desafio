@@ -18,6 +18,9 @@ Ter uma base de dados com uma tabela produtos com os campos:
 **Todas as ações na página deverão refletir no banco de dados.**
 
 
+## Video de apresentação do projeto em execução
+![Projeto finalizado](https://github.com/Doni-zete/react-bestminds-desafio/blob/main/img/baixado.png)
+
 ## Stack utilizada
 
 **Front-end:** React, TailwindCSS.
