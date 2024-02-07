@@ -6,7 +6,6 @@ import {
  findAllProducts,
  deleteProduct,
 } from '../../services/produtoEsportivoService'
-import Footer from '../../components/Footer'
 import ModalConfirmarDelete from '../../components/ModalConfirmarDelete'
 
 const Admin = () => {
@@ -159,7 +158,7 @@ const Admin = () => {
     </div>
    </section>
 
-   <Footer />
+ 
    <ModalConfirmarDelete
     isOpen={showModal}
     title="Confirmação"
