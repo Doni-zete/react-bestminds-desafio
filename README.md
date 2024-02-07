@@ -67,18 +67,11 @@ Instale as dependências
 
 Após executar os comandos acima, irão aparecer duas pastas com o nome "node_modules".
 
-
-Entre no diretório do projeto. Há dois projetos: um backend-crud-mysql e outro frontend-react. 
 ![Dependencia instalada](https://github.com/Doni-zete/react-bestminds-desafio/blob/main/img/dependencias.png)
 
 ## Variáveis de Ambiente
 
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
-
-Há um arquivo na raiz do projeto "backend-crud-mysql", denominado ".env_exemplo". Lembre-se de renomeá-lo para ".env" e coloque as variáveis para se conectar com o seu banco MySql.
-
-
-![Dotenv](https://github.com/Doni-zete/react-bestminds-desafio/blob/main/img/dot.png)
 
 `DB_HOST=`
 
@@ -89,6 +82,13 @@ Há um arquivo na raiz do projeto "backend-crud-mysql", denominado ".env_exemplo
 `DB_PASSWORD=`
 
 `DB_DATABASE=`
+
+Há um arquivo na raiz do projeto "backend-crud-mysql", denominado ".env_exemplo". Lembre-se de renomeá-lo para ".env" e coloque as variáveis para se conectar com o seu banco MySql.
+
+
+![Dotenv](https://github.com/Doni-zete/react-bestminds-desafio/blob/main/img/dot.png)
+
+
 
 
 Você irá precisar de dois terminais abertos: um para executar o projeto do frontend e outro para o backend.
