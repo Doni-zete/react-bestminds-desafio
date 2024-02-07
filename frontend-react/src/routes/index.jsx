@@ -8,6 +8,7 @@ import Sobre from '../pages/Sobre'
 import AddProduto from '../pages/AddProduto'
 import EditeProduto from '../pages/EditeProduto'
 import ProdutoListaEsportivo from '../components/ProdutoListaEsportivo'
+import NotFound from '../components/NotFound'
 
 export default function Rotas() {
  return (
@@ -23,6 +24,7 @@ export default function Rotas() {
     />
     <Route path="/admin/add-product" element={<AddProduto />} />
     <Route path="/admin/edit-product/:id" element={<EditeProduto />} />
+    <Route path="/*" element={<NotFound />} />
    </Routes>
   </BrowserRouter>
  )
