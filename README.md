@@ -19,7 +19,7 @@ Ter uma base de dados com uma tabela produtos com os campos:
 
 
 ## Video de apresentação do projeto em execução
-![Projeto finalizado](https://youtu.be/1duhHda-bdI)
+[![Apresentação](https://img.youtube.com/vi/1duhHda-bdI/0.jpg)](https://www.youtube.com/watch?v=1duhHda-bdI)
 
 ## Stack utilizada
 
